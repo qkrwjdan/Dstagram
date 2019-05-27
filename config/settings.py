@@ -124,3 +124,6 @@ STATIC_URL = '/static/'
 #각 앱에서 업로드 하는 파일들을 한 폴더를 중심으로 모으기 위해 MEDIA_ROOT 옵션 설정
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#로그인 후 이동할 페이지 설정의 기본값을 설정
+LOGIN_REDIRECT_URL = '/'
