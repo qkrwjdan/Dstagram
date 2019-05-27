@@ -3,10 +3,12 @@ from django.views.generic.edit import CreateView,DeleteView,UpdateView
 
 from .models import Photo
 
+#함수형 뷰
 def photo_list(request):
     photos = Photo.objects.all()
     return render(request,'photo/list.html',{'photos' : photos })
 
+#클래스형 뷰
 class PhotoUploadView(CreateView):
     model = Photo
     fields = ['photo','text']
