@@ -2,8 +2,6 @@ from django.contrib import admin
 
 from .models import Photo
 
-
-#관리자 페이지 커스텀하기
 class PhotoAdmin(admin.ModelAdmin):
     list_display = ['id','author','created','updated']
     raw_id_fields = ['author']
