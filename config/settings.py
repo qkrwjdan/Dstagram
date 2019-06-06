@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'photo',
     'accounts',
+    'disqus',
+    'django.contrib.sites',
+
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #로그인 후 이동할 페이지 설정의 기본값을 설정
 LOGIN_REDIRECT_URL = '/'
+
+#disqus사용을 위한 설정값을 추가
+DISQUS_WEBSITE_SHORTNAME = 'qkrwjdan'
+SITE_ID = 1
