@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'disqus',
     'django.contrib.sites',
+    'storages',
 
 ]
 
@@ -134,3 +135,16 @@ LOGIN_REDIRECT_URL = '/'
 #disqus사용을 위한 설정값을 추가
 DISQUS_WEBSITE_SHORTNAME = 'qkrwjdan'
 SITE_ID = 1
+
+#AMAZON SETTINGS
+# User name,Password,Access key ID,Secret access key,Console login link
+# park,,AKIA45KSM5PLIT4BHR52,g9JOJUddTUdqFhhBQGRHX2thR/8r7ZReaS6sIcGR,https://887620430806.signin.aws.amazon.com/console
+AWS_ACCESS_KEY_ID = 'AKIA45KSM5PLIT4BHR52'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_REGION = 'ap-northeast-2'
+AWS_STORAGE_BUCKET_NAME = 'dstagram-jungmu'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME,AWS_REGION)
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl' : 'max-age=86400',
+}
+DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
